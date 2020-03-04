@@ -1,5 +1,5 @@
 import React from "react";
-import { gql } from "apllo-boost";
+import { gql } from "apollo-boost";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
