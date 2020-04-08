@@ -64,7 +64,7 @@ export default ({
             <Input placeholder={"Email"} {...email} type="email" />
             <Button text={"Log in"} />
           </form>
-        )}{" "} 
+        )}
         {action === "signUp" && (
           <form onSubmit={onSubmit}>
             <Input placeholder={"First name"} {...firstName} />
@@ -79,7 +79,8 @@ export default ({
           <Button text={"Confirm"} />
         </form>}
       </Form>
-      <StateChanger>
+      {action !== "confirm" && (
+        <StateChanger>
         {action === "logIn" ? (
           <>
             Don't have an account?{" "}
@@ -92,5 +93,6 @@ export default ({
           </>
         )}
       </StateChanger>
+      )}
     </Wrapper>
   );
