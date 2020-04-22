@@ -92,7 +92,7 @@ export default ({
             <Link onClick={() => setAction("logIn")}>Log in</Link>
           </>
         )}
-      </StateChanger>
+        </StateChanger>
       )}
     </Wrapper>
   );
