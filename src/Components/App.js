@@ -35,12 +35,12 @@ export default () => {
          <>
           <Header />
           <Wrapper>
-            <Routes isLoggIn={isLoggedIn} />
+            <Routes isLoggedIn={isLoggedIn} />
             <Footer />
           </Wrapper>
          </>
         </Router>
-        <ToastContainer position={toast.POSITION.BOTTOM_LEFT  } />
+        <ToastContainer position={toast.POSITION.BOTTOM_LEFT} />
     </ThemeProvider>
   );
 };

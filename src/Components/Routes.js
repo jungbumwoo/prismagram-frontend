@@ -10,8 +10,8 @@ import Profile from "../Routes/Profile";
 const LoggedInRoutes = () => (
     <Switch>
         <Route exact path="/" component={Feed}/>
-        <Route path="/explore" component={Explore} />
         <Route path="/search" component={Search} />
+        <Route path="/explore" component={Explore} />
         <Route path="/:username" component={Profile} />
     </Switch>
 );

@@ -1,1 +1,1 @@
-export default () => "Feed";
+export default () => "This is Feed";
