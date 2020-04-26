@@ -63,8 +63,17 @@ const HeaderLink = styled(Link)`
   }
 `;
 
+const ME = gql`
+  {
+    me {
+      username
+    }
+  }
+`;
+
 export default withRouter(({history}) => {
   const search = useInput("");
+  const { data } = useQuery(ME);
   const onSearchSubmit = (e) => {
     e.preventDefault();
     history.push(`/search?term=${search.value}`);
@@ -89,9 +98,11 @@ export default withRouter(({history}) => {
           <HeaderLink to="/notifications">
             <HeartEmpty />
           </HeaderLink>
-          <HeaderLink to="/username">
+          {!(data && data.me) ? <HeaderLink to="/#">
             <User />
-          </HeaderLink>
+          </HeaderLink>: <HeaderLink to={data.me.username}>
+            <User />
+          </HeaderLink>}
         </HeaderColumn>
       </HeaderWrapper>
     </Header>
