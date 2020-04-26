@@ -1,10 +1,3 @@
 import React from "react";
 
-export default () => {
-    console.log(this.props);
-    return (
-        <>
-            hi.
-        </>
-    );
-}
+export default () => "hi"

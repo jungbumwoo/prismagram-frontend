@@ -17,9 +17,9 @@ const LoggedInRoutes = () => (
 );
 
 const LoggedOutRoutes = () => (
-    <>
+    <Switch>
         <Route exact path="/" component={Auth}/>
-    </>
+    </Switch>
 );
 
 const AppRouter = ({ isLoggedIn }) => (
