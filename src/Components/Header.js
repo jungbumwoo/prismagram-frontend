@@ -78,7 +78,7 @@ export default () => {
           </Link>
         </HeaderColumn>
         <HeaderColumn>
-          <form>
+          <form action="/search">
             <SearchInput {...search} placeholder="Search" />
           </form>
         </HeaderColumn>
