@@ -97,7 +97,8 @@ export default ({
   createdAt,
   newComment,
   currentItem,
-  toggleLike
+  toggleLike,
+  onKeyPress
 }) => (
   <Post>
     <Header>
@@ -123,7 +124,7 @@ export default ({
       </Buttons>
       <FatText text={likeCount === 1 ? "1 like" : `${likeCount} likes`} />
       <Timestamp>{createdAt}</Timestamp>
-      <Textarea placeholder={"Add a comment..."} {...newComment} />
+      <Textarea placeholder={"Add a comment..."} {...newComment} onKeyPress={onKeyPress} />
     </Meta>
   </Post>
 );

@@ -52,6 +52,10 @@ const PostContainer = ({
       }
     };
 
+    const onKeyPress = e => {
+
+    };
+
     return (
       <PostPresenter 
             user={user}
@@ -67,6 +71,7 @@ const PostContainer = ({
             setLikeCount={setLikeCount}
             currentItem={currentItem}
             toggleLike={toggleLike}
+            onKeyPress={onKeyPress}
           />
     );
 };
