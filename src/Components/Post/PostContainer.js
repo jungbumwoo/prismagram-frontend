@@ -26,7 +26,7 @@ const PostContainer = ({
     const [ toggleLikeMutation ] = useMutation(TOGGLE_LIKE, {
       variables: { postId: id }
     });
-    const addCommentMutation = useMutation(ADD_COMMENT, {
+    const [ addCommentMutation ] = useMutation(ADD_COMMENT, {
       variables: {postId: id, text: comment.value }
     });
 
@@ -69,7 +69,7 @@ const PostContainer = ({
         }
       }
     };
-
+    
     return (
       <PostPresenter 
             user={user}
