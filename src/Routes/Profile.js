@@ -67,7 +67,7 @@ export default withRouter(({ match: { params: { username }}}) => {
             <>
                 <Header>
                     <HeaderColumn>
-                        <Avata size="lg" url={avatar} />
+                        <Avatar size="lg" url={avatar} />
                     </HeaderColumn>
                 </Header>
             </>
